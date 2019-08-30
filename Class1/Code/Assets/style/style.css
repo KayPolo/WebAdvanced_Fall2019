@@ -1,0 +1,25 @@
+.container{
+    width: 80%;
+    height: auto;
+    margin-left:10%; 
+    
+}
+
+.boxes{
+    width: calc(100%/3);
+    height: 20vw;
+    /* background-color: black;  */
+    float: left;
+}
+
+#box1{
+    background-color: gold;
+}
+
+#box2{
+    background-color: salmon;
+}
+
+#box3{
+    background-color: rgb(30, 111, 111);
+}
