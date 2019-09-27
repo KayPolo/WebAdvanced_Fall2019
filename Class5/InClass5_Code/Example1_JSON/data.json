@@ -1,0 +1,24 @@
+{
+    "people": [
+
+        {
+
+            "firstName": "Karla",
+            "lastName": "Polo",
+            "age": "30"
+        },
+
+        {
+
+            "firstName": "Brandon",
+            "lastName": "Palmer",
+            "age": "26"
+        },
+        {
+
+            "firstName": "Leah",
+            "lastName": "Takele",
+            "age": "28"
+        }
+    ]
+}

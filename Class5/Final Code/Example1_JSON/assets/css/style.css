@@ -1,0 +1,17 @@
+/* your style begins here */
+html, body {
+	background-color: none;
+}
+
+.json-container{
+	font-size: 20px;
+	color: dimgray;
+	padding: 30px;
+	display: block;
+	margin: 30px; 
+	text-align: center;
+	margin: 0 auto;
+
+
+}
+
