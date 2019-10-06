@@ -1,0 +1,45 @@
+body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+
+
+h3 img {
+    max-height: 50px;
+}
+
+#title{
+  font-size: 50px;
+  padding: 10px;
+  color: teal;
+  margin-top: 30px;
+}
+
+#map { 
+    height: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5px;
+    border: 5px solid teal;
+}
+
+
+
+#search-bar{
+	border: 5px solid teal;
+	margin-bottom: 20px;
+}
+
+#search-button{
+	background-color: teal;
+    color: aquamarine;
+    border: 5px solid teal;
+  }
+
+.input-group{
+	padding: 10px;
+
+}
+
