@@ -1,0 +1,53 @@
+<input id ='msgBox' height = '24px'>
+<button id = 'sendButton'> SEND </button>
+
+<div id='messages'></div>
+
+<!-- <h1> 'helllo world' </h1> -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js' ></script>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+
+<script> 
+var username = prompt ('please enter your name')
+var socket = io()
+
+
+// hey server, watsup is the 'data' we are calling from server side
+socket.on('confirmConnection', function(data){
+	console.log(data)
+})
+
+//there is a new user, let s print their information
+socket.on('newUser', function(data){
+console.log(data)
+})
+
+socket.on('newMsg', function(data){
+
+// it should be data.user because we are looking at the package other client sending us and finding user and text seperatelly. data reaches the package. 
+		$('#messages').append('<p><strong>' + data.user + ': </strong>' + data.text +'</p>')
+})
+
+$('#sendButton').on('click', sendMsg)
+
+//when we click on enter 
+$(document).on('keyup', function(e){
+	if(e.key == 'Enter'){
+		sendMsg()
+	}
+})
+
+function sendMsg(){
+	var msg = $('#msgBox').val()
+	$('#messages').append('<p><strong>' + username + ': </strong>' + msg +'</p>')
+	$('#msgBox').val('')
+	//sending object: two chunks of information
+	socket.emit('newMsg', {user:username, text:msg})
+}
+
+</script>
