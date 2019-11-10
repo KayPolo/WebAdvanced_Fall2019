@@ -21,7 +21,13 @@ cd directory-name
 npx create-react-app app-name
 
 • (npx is a npm package runner. the X probalbly stands for excecute. This allows you to download and run the package)
+
+## A second way of creating your app
+npm install -g create-reacr-app
 • (-g stands for globally)
+
+And then 
+create-react-app app-name
 
 * Important: If you're using Mac or Linuz, most likeley you will have to type sudo in front of the comand line, and then imput your password
 
@@ -31,8 +37,14 @@ cd app-name
 ## Execute the app
 To start the developer server use 
 yarn start 
+
+you can also use 
+npm start
+
 (If you use instead npm start is going to work as well. They are equivalent) 
 (This command is used for development, but notice that the development build the app is not optimized. To create a production build to deploy your app, use yarn build)
+
+Your app is going to run in localhost:3000
 
 
 -------------------------------------------------------------
